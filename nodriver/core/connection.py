@@ -519,4 +519,4 @@ class Connection(metaclass=CantTouchThis):
 
     async def _send_oneshot(self, cdp_obj):
         """fire and forget , eg: send command without waiting for any response"""
-        return await self.send(cdp_obj, _is_update=True)
+        return await Connection.send(self,cdp_obj, _is_update=True)
